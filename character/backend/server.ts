@@ -1,12 +1,7 @@
 import * as Http from 'http'
-// import * as Url from 'url'
 import * as Mongo from 'mongodb'
 
 export namespace EIA2_W19 {
-  // interface Order {
-  //   [type: string]: string | string[]
-  // }
-
   let characters: Mongo.Collection
 
   let port: number | string | undefined = process.env.PORT
@@ -74,16 +69,14 @@ export namespace EIA2_W19 {
     if (_character._id) {
       return await characters.updateOne({ _id: _character._id }, { $set: _character })
     } else {
-      console.log('create')
       return characters.insertOne(_character)
     }
   }
 
   async function findOne(id: string) {
-    const test = await characters.findOne({
-      _id: '5e39c58de049892a3dfcf353'
+    return await characters.findOne({
+      _id: id
     })
-    console.log(test, id)
     return test
   }
 
