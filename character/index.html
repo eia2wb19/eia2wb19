@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./dist/frontend/common/vector.js"></script>
+    <script src="./dist/frontend/common/color.enum.js"></script>
+    <script src="./dist/frontend/common/drawable.js"></script>
+    <script src="./dist/frontend/character/head.js"></script>
+    <script src="./dist/frontend/character/body.js"></script>
+    <script src="./dist/frontend/character/leg.js"></script>
+    <script src="./dist/frontend/character/arm.js"></script>
+    <script src="./dist/frontend/character/foot.js"></script>
+    <script src="./dist/frontend/character/character.js"></script>
+
+    <script src="./dist/frontend/main.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="column" id="canvasWrapper">
+      <canvas width="100%" min-height="600"></canvas>
+    </div>
+    <div class="column">
+      <form id="orderForm" method="GET">
+        <div>
+          <h2>Edit Character</h2>
+          <select name="characterSelect" id="characterSelect">
+            <option value="new">Create new Character</option>
+          </select>
+          <fieldset id="General">
+            <legend>General</legend>
+            <label for="name">
+              Name
+              <input type="text" name="name" id="name" />
+            </label>
+            <br />
+            <label for="name">
+              General height
+              <input type="range" name="generalHeight" id="generalHeight" min="1" max="10.0" step="0.01" value="5" />
+            </label>
+          </fieldset>
+          <fieldset id="Head">
+            <legend>Head</legend>
+            <label for="name">
+              Width
+              <input type="range" name="headWidth" id="headWidth" min="20" max="100.0" step="0.1" value="40" /> </label
+            ><br />
+            <label for="name">
+              Height
+              <input
+                type="range"
+                name="headHeight"
+                id="headHeight"
+                min="20"
+                max="100.0"
+                step="0.1"
+                value="50"
+              /> </label
+            ><br />
+            <label for="name">
+              Mouth size
+              <input type="range" name="mouthSize" id="mouthSize" min="1" max="10.0" step="0.1" value="5" /> </label
+            ><br />
+            <label for="name">
+              Eye size
+              <input type="range" name="eyeSize" id="eyeSize" min="1" max="10.0" step="0.1" value="5" /> </label
+            ><br />
+            <label for="name">
+              Skin color
+              <input type="text" name="headColor" id="headColor" /> </label
+            ><br />
+            <label for="name">
+              Eye color
+              <input type="text" name="eyeColor" id="eyeColor" />
+            </label>
+          </fieldset>
+          <fieldset id="Body">
+            <legend>Body</legend>
+            <label for="name">
+              Width
+              <input type="range" name="bodyWidth" id="bodyWidth" min="40" max="400.0" step="0.1" value="100" /> </label
+            ><br />
+            <label for="name">
+              Height
+              <input type="range" name="bodyHeight" id="bodyHeight" min="20" step="0.1" value="50" /> </label
+            ><br />
+            <label for="name">
+              Body color
+              <input type="text" name="bodyColor" id="bodyColor" />
+            </label>
+          </fieldset>
+          <fieldset id="LeftArm">
+            <legend>Left Arm</legend>
+            <label for="name">
+              Width
+              <input
+                type="range"
+                name="leftArmWidth"
+                id="leftArmWidth"
+                min="40"
+                max="400.0"
+                step="0.1"
+                value="100"
+              /> </label
+            ><br />
+            <label for="name">
+              Height
+              <input type="range" name="leftArmHeight" id="leftArmHeight" min="20" step="0.1" value="50" /> </label
+            ><br />
+            <label for="name">
+              Color
+              <input type="text" name="leftArmColor" id="leftArmColor" />
+            </label>
+          </fieldset>
+          <fieldset id="RightArm">
+            <legend>Right Arm</legend>
+            <label for="name">
+              Width
+              <input
+                type="range"
+                name="rightArmWidth"
+                id="rightArmWidth"
+                min="40"
+                max="400.0"
+                step="0.1"
+                value="100"
+              /> </label
+            ><br />
+            <label for="name">
+              Height
+              <input type="range" name="rightArmHeight" id="rightArmHeight" min="20" step="0.1" value="50" /> </label
+            ><br />
+            <label for="name">
+              Color
+              <input type="text" name="rightArmColor" id="rightArmColor" />
+            </label>
+          </fieldset>
+          <fieldset id="RightLeg">
+            <legend>Legs</legend>
+            <label for="name">
+              Width
+              <input type="range" name="legWidth" id="legWidth" min="10" max="80.0" step="0.1" value="40" /> </label
+            ><br />
+            <label for="name">
+              Height
+              <input type="range" name="legHeight" id="legHeight" min="5" max="60" step="0.1" value="30" /> </label
+            ><br />
+            <label for="name">
+              Color
+              <input type="text" name="legColor" id="legColor" />
+            </label>
+          </fieldset>
+          <fieldset id="Shoes">
+            <legend>Shoes</legend>
+            <label for="name">
+              Width
+              <input type="range" name="footWidth" id="footWidth" min="8" max="60.0" step="0.1" value="25" /> </label
+            ><br />
+            <label for="name">
+              Color
+              <input type="text" name="footColor" id="footColor" />
+            </label>
+          </fieldset>
+        </div>
+
+        <fieldset>
+          <button id="save">Save</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "eia2-inverted",
+  "version": "1.0.0",
+  "description": "Control for the heroku implementation",
+  "main": "",
+  "scripts": {
+    "start:dev": "npm run start:dev:frontend && npm run start:dev:backend",
+    "start:dev:frontend": "tsc --watch",
+    "start:dev:backend": "node ./character/dist/backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JirkaDellOro/EIA2-Inverted.git"
+  },
+  "author": "Jirka R. Dell'Oro-Friedl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JirkaDellOro/EIA2-Inverted/issues"
+  },
+  "homepage": "https://github.com/JirkaDellOro/EIA2-Inverted#readme",
+  "dependencies": {
+    "@types/mongodb": "^3.3.1",
+    "mongodb": "^3.3.2"
+  }
+}
